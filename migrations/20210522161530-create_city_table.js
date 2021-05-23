@@ -16,10 +16,10 @@ module.exports = {
         Created:      { allowNull: false, type: Sequelize.DATE, defaultValue: new Date() },
         Modified:     { allowNull: false, type: Sequelize.DATE, defaultValue: new Date() },
         
-        CityId:       { type: Sequelize.INTEGER, onDelete: 'CASCADE', references: {
+        CountryId:       { type: Sequelize.INTEGER, onDelete: 'CASCADE', references: {
           model: tableModel_countries,
           key: 'Id',
-          as: 'CityId'
+          as: 'CountryId'
         }},        
         Name:         { allowNull: true, type: Sequelize.STRING  },
       });

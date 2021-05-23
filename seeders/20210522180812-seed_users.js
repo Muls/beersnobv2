@@ -1,13 +1,12 @@
 'use strict';
 
-let tableModel = { schema: 'app', tableName: 'countries' };
+let tableModel = { schema: 'app', tableName: 'users' };
 
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(tableModel, [
-      { Name: 'Netherlands', Capital: 'Amsterdam' },
-      { Name: 'Germany', Capital: 'Berlin' },
+      { Username: 'MikeH', Password: 'super_secret_pa$$word' },
     ], {});
   },
 

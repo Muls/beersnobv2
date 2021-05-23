@@ -1,10 +1,10 @@
 module.exports = {
   development: {
-    username: "mhuls",
-    password: "pindakaasmetsambal",
-    database: "dnxmap_dev",
+    username: "postgres",
+    password: "mikepw",
+    database: "beersnob",
     host: "localhost",
-    port: "54321",
+    port: "5432",
     dialect: "postgres"
   },
   production: {

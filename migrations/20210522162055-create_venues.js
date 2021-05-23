@@ -1,6 +1,7 @@
 'use strict';
 
 let tableModel = { schema: 'app', tableName: 'venues' };
+let tableModel_cities = { schema: 'app', tableName: 'cities' };
 
 
 module.exports = {
@@ -15,6 +16,11 @@ module.exports = {
         Created:      { allowNull: false, type: Sequelize.DATE, defaultValue: new Date() },
         Modified:     { allowNull: false, type: Sequelize.DATE, defaultValue: new Date() },
         
+        CityId:       { type: Sequelize.INTEGER, onDelete: 'CASCADE', references: {
+          model: tableModel_cities,
+          key: 'Id',
+          as: 'CityId'
+        }},        
         Name:         { allowNull: true, type: Sequelize.STRING  },
         Address:      { allowNull: true, type: Sequelize.STRING  },
       });
